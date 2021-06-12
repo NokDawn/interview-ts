@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  &__ico {
+    position: relative;
+
+    input {
+      padding: 1.5rem;
+      border: 1px solid $colorGrayTwo;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    span {
+      position: absolute;
+      top: 55%;
+      right: 3%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+    }
+  }
+}

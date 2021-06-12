@@ -2,8 +2,15 @@ import { Product } from 'common/types';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import Header from 'components/Header/Header';
+import Input from 'components/Input/Input';
+
 import { AppRoute } from 'routing/AppRoute.enum';
 import { getProducts } from './products.api';
+
+import { GrSearch } from 'react-icons/gr';
+
+import './Products.scss';
 
 export const Products = () => {
   const [products, setProducts] = useState<Product[] | null>(null);
@@ -17,10 +24,12 @@ export const Products = () => {
   }, []);
 
   return (
-    <>
-      <h2>Products page</h2>
+    <div className='products'>
+      <Header showButton />
+      <Input name='search' placeholder='Search'>
+        <GrSearch />
+      </Input>
       <Link to={AppRoute.login}> Login </Link>
-      <div>{JSON.stringify(products)}</div>
-    </>
+    </div>
   );
 };

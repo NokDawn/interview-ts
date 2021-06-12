@@ -1,5 +1,7 @@
+@import '../../styles/variables.scss';
+
 .login {
-  margin: 3rem 1.5rem;
+  margin: 0 2.5rem;
 
   &-company-title {
     font-size: 2rem;
@@ -14,19 +16,14 @@
     display: flex;
     flex-direction: column;
 
-    &-subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+    &-input-first {
+      margin-bottom: 1.5rem;
     }
 
-    &-input {
-      padding: 1rem;
-      border: 1px solid rgb(221, 214, 214);
-      border-radius: 5px;
-    }
-
-    &-button {
-      padding: 1rem 0;
+    &-forgotten-password {
+      text-decoration: underline;
+      font-size: 1.4rem;
+      color: $colorGrayFour;
     }
   }
 }
@@ -34,5 +31,5 @@
 .heading-primary {
   font-weight: 400;
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }

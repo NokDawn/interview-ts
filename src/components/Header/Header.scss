@@ -1,0 +1,20 @@
+.header {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo-container {
+    &-logo {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  .button {
+    width: 80px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+}

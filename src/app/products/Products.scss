@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.products {
+  margin: 0 2.5rem;
+
+  .input-wrapper {
+    &__ico {
+      input {
+        &::placeholder {
+          color: $colorText;
+        }
+      }
+    }
+  }
+}
