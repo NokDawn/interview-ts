@@ -1,0 +1,44 @@
+@import '../../../../../../styles/variables.scss';
+
+.product {
+  margin-bottom: 2rem;
+
+  &__image {
+    height: 20rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px sold transparent;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &__description {
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 1.5rem;
+
+    .heading-secondary {
+      margin-bottom: 1rem;
+    }
+
+    &-subtitle {
+      display: inline-block;
+      color: $colorGrayFour;
+      font-size: 1.2rem;
+      margin-bottom: 4rem;
+    }
+
+    &__buttons {
+      margin-top: 2rem;
+
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}

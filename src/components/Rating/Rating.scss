@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.rating {
+  svg {
+    margin-right: 1rem;
+  }
+
+  &-full {
+    color: $colorOrange;
+  }
+
+  &-empty {
+    color: $colorGrayThree;
+  }
+}

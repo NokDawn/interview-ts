@@ -1,8 +1,8 @@
 import Api from 'common/api';
-import { Product } from 'common/types';
+import { Sample } from 'common/types';
 
 const getProducts = async () => {
-  const response = await Api.get<Product[]>('/products');
+  const response = await Api.get<Sample>('/products?page=1&limit=4');
   return response.data;
 };
 

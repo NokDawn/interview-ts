@@ -1,14 +1,55 @@
 @import '../../styles/variables.scss';
 
 .products {
-  margin: 0 2.5rem;
-
   .input-wrapper {
+    margin-bottom: 1.5rem;
+
     &__ico {
       input {
         &::placeholder {
           color: $colorText;
         }
+      }
+    }
+  }
+
+  &__filter {
+    display: flex;
+    margin-bottom: 1.5rem;
+
+    &-last {
+      margin-left: 2rem;
+    }
+  }
+
+  &__pagination {
+    background-color: $colorGrayOne;
+    padding-bottom: 5rem;
+
+    &__container {
+      display: flex;
+      align-items: center;
+
+      &-page {
+        margin: 0.5rem;
+        font-size: 1.3rem;
+      }
+
+      &-previous,
+      &-next {
+        font-size: 1.3rem;
+      }
+
+      &-previous {
+        margin-right: auto;
+      }
+
+      &-next {
+        margin-left: auto;
+      }
+
+      &-active {
+        color: blue;
       }
     }
   }

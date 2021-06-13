@@ -5,9 +5,25 @@ import './Input.scss';
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   label?: string;
+  checkbox?: boolean;
 }
 
-const Input: React.FC<InputProps> = ({ name, label, children, ...rest }) => {
+const Input: React.FC<InputProps> = ({
+  name,
+  label,
+  checkbox,
+  children,
+  ...rest
+}) => {
+  if (checkbox) {
+    return (
+      <div className='input-checkbox'>
+        <input type='checkbox' id={name} {...rest} />
+        <label htmlFor={name}>{label}</label>
+      </div>
+    );
+  }
+
   return (
     <div className='input-wrapper'>
       {label && <label htmlFor={name}>{label}</label>}

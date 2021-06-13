@@ -1,7 +1,9 @@
 @import '../../styles/variables.scss';
 
 .login {
+  position: relative;
   margin: 0 2.5rem;
+  height: 90vh;
 
   &-company-title {
     font-size: 2rem;
@@ -9,7 +11,7 @@
   }
 
   &__form {
-    width: 90%;
+    width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -25,6 +27,10 @@
       font-size: 1.4rem;
       color: $colorGrayFour;
     }
+  }
+
+  .button {
+    margin-top: 3rem;
   }
 }
 
