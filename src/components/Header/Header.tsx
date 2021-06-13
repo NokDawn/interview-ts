@@ -9,7 +9,7 @@ export interface HeaderProps {
   showButton?: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ showButton }) => {
+const Header: React.FC<HeaderProps> = ({ showButton, children }) => {
   const history = useHistory();
   const isUserLoggedIn = false;
   const showUserButton = () => {
@@ -37,6 +37,7 @@ const Header: React.FC<HeaderProps> = ({ showButton }) => {
           join.tsh.io
         </span>
       </div>
+      {children}
       {showUserButton()}
     </header>
   );

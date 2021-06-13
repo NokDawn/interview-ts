@@ -2,6 +2,7 @@ import React from 'react';
 
 import Product from './components/Product/Product';
 import EmptyList from './components/Empty-List/EmptyList';
+import Spinner from 'components/Spinner/Spinner';
 
 import './ProductsGrid.scss';
 
@@ -12,6 +13,14 @@ export interface ProductGridProps {
 
 const ProductGrid: React.FC<ProductGridProps> = ({ products, loading }) => {
   console.log(products);
+
+  if (loading) {
+    return (
+      <div className='products-grid'>
+        <Spinner />
+      </div>
+    );
+  }
 
   if (!products && loading === false) {
     return (

@@ -4,3 +4,26 @@
   background-color: $colorGrayOne;
   padding: 2rem 0;
 }
+
+@media (min-width: $responsiveS) {
+  .products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .product {
+      flex-basis: 50%;
+    }
+  }
+}
+
+@media (min-width: $responsiveL) {
+  .products-grid {
+    padding: 2rem 10rem;
+
+    .product {
+      flex-basis: 23%;
+    }
+  }
+}

@@ -42,3 +42,11 @@
     }
   }
 }
+
+@media (min-width: $responsiveS) {
+  .product {
+    .wrapper {
+      margin: 0 3rem;
+    }
+  }
+}

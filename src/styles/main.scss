@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import '../styles/variables.scss';
 
 *,
 *::before,
@@ -23,4 +24,17 @@ li {
 
 .wrapper {
   margin: 0 2.5rem;
+  max-width: 1366px;
+}
+
+@media (min-width: $responsiveSM) {
+  .wrapper {
+    margin: 0 5rem;
+  }
+}
+
+@media (min-width: $responsiveL) {
+  .wrapper {
+    margin: 0 auto;
+  }
 }

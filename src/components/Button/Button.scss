@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 
 .button {
+  cursor: pointer;
   padding: 1.5rem 0;
   background-color: $colorBlueLight;
   color: white;

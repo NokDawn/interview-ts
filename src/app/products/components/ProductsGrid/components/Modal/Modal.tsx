@@ -34,6 +34,7 @@ const Modal: React.FC<ModalProps> = ({
           <MdClose onClick={() => setOpenModal(false)} />
         </div>
       </div>
+      <div className='modal__overlay' onClick={() => setOpenModal(false)} />
     </div>
   );
 };

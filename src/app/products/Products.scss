@@ -54,3 +54,31 @@
     }
   }
 }
+
+@media (min-width: $responsiveSM) {
+  .products {
+    .input-wrapper {
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+
+    &__filter {
+      margin-bottom: 0;
+      margin-right: auto;
+
+      .input-checkbox {
+        label {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $responsiveL) {
+  .products {
+    .input-wrapper {
+      width: 500px;
+    }
+  }
+}

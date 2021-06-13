@@ -43,3 +43,17 @@
     margin-left: 0.5rem;
   }
 }
+
+@media (min-width: $responsiveSM) {
+  .input-wrapper {
+    &__ico {
+      input {
+        padding: 1rem;
+      }
+
+      span {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
