@@ -5,9 +5,10 @@ import EmptyList from './components/Empty-List/EmptyList';
 import Spinner from 'components/Spinner/Spinner';
 
 import './ProductsGrid.scss';
+import { Product as ProductTypes } from 'common/types';
 
 export interface ProductGridProps {
-  products: any;
+  products: ProductTypes[] | undefined;
   loading: boolean;
 }
 
@@ -33,7 +34,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products, loading }) => {
   return (
     <div className='products-grid'>
       {products &&
-        products.items.map((product: any) => (
+        products.map((product: any) => (
           <Product key={product.id} product={product} />
         ))}
     </div>

@@ -54,7 +54,8 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.3",
     "react-test-renderer": "16.13.1",
-    "typescript": "3.9.7"
+    "typescript": "3.9.7",
+    "use-debounce": "^6.0.1"
   },
   "devDependencies": {
     "@types/node-sass": "^4.11.1",

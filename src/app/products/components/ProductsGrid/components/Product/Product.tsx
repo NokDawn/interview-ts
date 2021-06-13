@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Button from 'components/Button/Button';
 import Rating from 'components/Rating/Rating';
 import Modal from '../Modal/Modal';
+import Badge from 'components/Badge/Badge';
 
 import { Portal } from 'react-portal';
 
@@ -23,14 +24,17 @@ const Product: React.FC<ProductProps> = ({
         <div
           className='product__image'
           style={{ backgroundImage: `url(${image})` }}
-        ></div>
+        >
+          {promo && <Badge text='Promo' />}
+        </div>
         <div className='product__description'>
           <h2 className='heading-secondary'>{name}</h2>
           <span className='product__description-subtitle'>{description}</span>
           <Rating value={rating} />
           <div className='product__description__buttons'>
             <Button
-              text='Show details'
+              disabled={!active}
+              text={!active ? 'Unavailable' : 'Show details'}
               model='normal'
               onClick={() => {
                 setOpenModal(true);
