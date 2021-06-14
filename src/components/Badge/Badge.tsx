@@ -1,10 +1,8 @@
 import React from 'react';
 
-import './Badge.scss';
+import { BadgeProps } from './Badge.types';
 
-export interface BadgeProps {
-  text: string;
-}
+import './Badge.scss';
 
 const Badge: React.FC<BadgeProps> = ({ text }) => {
   return <div className='badge'>{text}</div>;

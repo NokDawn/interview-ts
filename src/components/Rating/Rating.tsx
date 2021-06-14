@@ -1,12 +1,10 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 
 import { FaStar, FaRegStar } from 'react-icons/fa';
 
-import './Rating.scss';
+import { RatingProps } from './Rating.types';
 
-export interface RatingProps {
-  value: number;
-}
+import './Rating.scss';
 
 const Rating: React.FC<RatingProps> = ({ value }) => {
   return (

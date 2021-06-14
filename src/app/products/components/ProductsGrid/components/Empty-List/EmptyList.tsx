@@ -4,9 +4,7 @@ import { BsBag } from 'react-icons/bs';
 
 import './EmptyList.scss';
 
-export interface EmptyListProps {}
-
-const EmptyList: React.FC<EmptyListProps> = () => {
+const EmptyList: React.FC = () => {
   return (
     <div className='empty-list'>
       <div className='wrapper'>

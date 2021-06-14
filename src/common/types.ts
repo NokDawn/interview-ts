@@ -23,7 +23,7 @@ export interface Meta {
   totalPages: number;
 }
 
-export interface Sample {
+export interface API {
   items: Array<Product>;
   links: Link;
   meta: Meta;

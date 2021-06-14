@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
+
+import { AppRoute } from 'routing/AppRoute.enum';
 
 import Button from 'components/Button/Button';
 
-import './Header.scss';
+import { HeaderProps } from './Header.types';
 
-export interface HeaderProps {
-  showButton?: boolean;
-}
+import './Header.scss';
 
 const Header: React.FC<HeaderProps> = ({ showButton, children }) => {
   const history = useHistory();
+
+  // Sample data
   const isUserLoggedIn = false;
-  const showUserButton = () => {
+
+  // Showing login/logout button if user is logged in or logged out
+  const showUserButton = useCallback(() => {
     let btn = null;
     if (showButton && isUserLoggedIn) {
       return (btn = <Button text='Log out' model='normal' />);
@@ -21,18 +25,18 @@ const Header: React.FC<HeaderProps> = ({ showButton, children }) => {
         <Button
           text='Log in'
           model='outline'
-          onClick={() => history.push('/login')}
+          onClick={() => history.push(AppRoute.login)}
         />
       ));
     } else return null;
-  };
+  }, [history, isUserLoggedIn, showButton]);
 
   return (
     <header className='header'>
       <div className='header__logo-container'>
         <span
           className='header__logo-container-logo'
-          onClick={() => history.push('/')}
+          onClick={() => history.push(AppRoute.home)}
         >
           join.tsh.io
         </span>

@@ -2,14 +2,9 @@ import React from 'react';
 
 import { MdClose } from 'react-icons/md';
 
-import './Modal.scss';
+import { ModalProps } from './Modal.types';
 
-export interface ModalProps {
-  image: string;
-  name: string;
-  description: string;
-  setOpenModal: (active: boolean) => void;
-}
+import './Modal.scss';
 
 const Modal: React.FC<ModalProps> = ({
   image,

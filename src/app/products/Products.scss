@@ -26,6 +26,26 @@
     background-color: $colorGrayOne;
     padding-bottom: 5rem;
 
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-first,
+    &-last {
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    &-first {
+      margin-right: 2rem;
+    }
+
+    &-last {
+      margin-left: 2rem;
+    }
+
     &__container {
       display: flex;
       align-items: center;
@@ -37,6 +57,7 @@
 
       &-previous,
       &-next {
+        display: none;
         cursor: pointer;
         font-size: 1.3rem;
       }

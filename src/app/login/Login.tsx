@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Header from 'components/Header/Header';
 import Input from 'components/Input/Input';
@@ -7,14 +6,10 @@ import Button from 'components/Button/Button';
 
 import { useMediaQuery } from 'react-responsive';
 
-import { AppRoute } from 'routing/AppRoute.enum';
-
 import './Login.scss';
 
 export const Login = () => {
   const isTablet = useMediaQuery({ minWidth: '768px' });
-
-  console.log(isTablet);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -1,28 +1,26 @@
 import Api from 'common/api';
-import { Sample } from 'common/types';
+import { API } from 'common/types';
 
 export interface APIProps {
+  page?: number;
+  limit?: number;
   searchQuery?: string;
+  promo?: boolean;
+  active?: boolean;
 }
 
 const getProducts = async (
-  page: number = 1,
-  limit: number = 4,
-  searchQuery: string = '',
-  promo: boolean = false,
-  active: boolean = false
+  page = 1,
+  limit = 4,
+  searchQuery = '',
+  promo = false,
+  active = false
 ) => {
-  console.log(typeof promo);
-  console.log(promo);
-
   const query = `/products?page=${page}&limit=${limit}${
     searchQuery && `&search=${searchQuery}`
   }${promo ? '&promo=true' : ''}${active ? '&active=true' : ''}`;
 
-  console.log(query);
-
-  const response = await Api.get<Sample>(query);
-  console.log(response);
+  const response = await Api.get<API>(query);
   return response.data;
 };
 

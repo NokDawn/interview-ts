@@ -32,3 +32,11 @@
     }
   }
 }
+
+@media (min-width: $responsiveSM) {
+  .empty-list {
+    padding-top: 3rem;
+    width: 50%;
+    min-height: 72.5vh;
+  }
+}

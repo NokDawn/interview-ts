@@ -1,11 +1,8 @@
-import React, { ButtonHTMLAttributes } from 'react';
+import React from 'react';
+
+import { ButtonProps } from './Button.types';
 
 import './Button.scss';
-
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
-  model: 'normal' | 'outline';
-}
 
 const Button: React.FC<ButtonProps> = ({ text, model, ...rest }) => {
   return (

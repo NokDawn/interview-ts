@@ -4,17 +4,12 @@ import Product from './components/Product/Product';
 import EmptyList from './components/Empty-List/EmptyList';
 import Spinner from 'components/Spinner/Spinner';
 
-import './ProductsGrid.scss';
-import { Product as ProductTypes } from 'common/types';
+import { ProductGridProps } from './ProductsGrid.types';
 
-export interface ProductGridProps {
-  products: ProductTypes[] | undefined;
-  loading: boolean;
-}
+import './ProductsGrid.scss';
 
 const ProductGrid: React.FC<ProductGridProps> = ({ products, loading }) => {
-  console.log(products);
-
+  // Fetching data
   if (loading) {
     return (
       <div className='products-grid'>
@@ -23,7 +18,8 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products, loading }) => {
     );
   }
 
-  if (!products && loading === false) {
+  // No data available
+  if (products?.length === 0 && loading === false) {
     return (
       <div className='products-grid'>
         <EmptyList />
@@ -31,6 +27,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products, loading }) => {
     );
   }
 
+  // Show data
   return (
     <div className='products-grid'>
       {products &&

@@ -7,14 +7,12 @@ import Badge from 'components/Badge/Badge';
 
 import { Portal } from 'react-portal';
 
+import { ProductProps } from './Product.types';
+
 import './Product.scss';
 
-export interface ProductProps {
-  product: any;
-}
-
 const Product: React.FC<ProductProps> = ({
-  product: { id, image, active, description, name, promo, rating },
+  product: { image, active, description, name, promo, rating },
 }) => {
   const [openModal, setOpenModal] = useState(false);
 
@@ -38,7 +36,6 @@ const Product: React.FC<ProductProps> = ({
               model='normal'
               onClick={() => {
                 setOpenModal(true);
-                console.log('Clicked!');
               }}
             />
           </div>

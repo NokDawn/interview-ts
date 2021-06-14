@@ -1,12 +1,8 @@
-import React, { InputHTMLAttributes } from 'react';
+import React from 'react';
+
+import { InputProps } from './Input.types';
 
 import './Input.scss';
-
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  name: string;
-  label?: string;
-  checkbox?: boolean;
-}
 
 const Input: React.FC<InputProps> = ({
   name,
